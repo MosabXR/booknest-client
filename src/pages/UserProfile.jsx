@@ -191,7 +191,10 @@ export default function UserProfile() {
                     {review?.profile_pic ? (
                       <Link to={`/book/${review?.book}`}>
                         <img
-                          src={review?.book_cover}
+                          src={
+                            review?.book_cover ||
+                            `https://dhmckee.com/wp-content/uploads/2018/11/defbookcover-min.jpg`
+                          }
                           className="w-full h-full object-cover"
                           alt="Reviewer profile"
                         />
